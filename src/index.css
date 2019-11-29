@@ -113,15 +113,19 @@ ul{
         font-family: 'Inconsolata', monospace;
       }
        /* 天気 */
-       .mark{
+       .icons div{
         background-color:#FFF;
         border-radius:90px;
         width:83px;
         margin:0 auto;
       }
-      .mark img{
-        height:80px;
-      }
+      /* 夜の時、アイコンの背景を暗くする */
+        .n01n,.n02n,.n03n,.n04n,.n09n,.n10n,.n11n,.n13n,.n50n{
+          background-color:#ccc !important;
+        }
+          .icons div img{
+            height:80px;
+          }
       p.main{
         font-size:26px;
         font-weight:100;

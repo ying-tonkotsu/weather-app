@@ -24,7 +24,8 @@ export default class extends React.Component {
             apiKey : myKey,
             requestCity: '',         //  ex. 'Tokyo,jp'
             city: '',
-            response : []
+            response: [],
+            request_line : 7
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleGetWeather = this.handleGetWeather.bind(this);
@@ -69,13 +70,14 @@ export default class extends React.Component {
                 }
             })();
             let imgUrl = 'http://openweathermap.org/img/wn/' + rk.weather[0].icon + '.png';
+            let nightIcon = 'n' + rk.weather[0].icon;
             return (
                 <li key={key} className={tempLevel}>
                     <p className="date">{rk.dt_txt}</p>
                     <div className="flex bottom">
                         <div className="icons">
-                            <div className="mark">
-                                <img src={imgUrl} />
+                            <div className={nightIcon}>
+                                <img src= {imgUrl} />
                             </div>
                             <p className="main">{rk.weather[0].main}</p>
                         </div>
