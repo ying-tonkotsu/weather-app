@@ -59,20 +59,18 @@ export default class extends React.Component {
         const list = Object.keys(res).map(key => {
             const rk = res[key]
             let temp = rk.main.temp - 273.15;
+            const tempLevel = (() => {
+                if (temp <= 10) {
+                    return "cold";
+                } if(25 <= temp) {
+                    return "hot";
+                }else {
+                    return "warm";
+                }
+            })();
             return (
-                // {
-                //     (state) => {
-                //         if (temp <= 10) {
-                //             return "cold";
-                //         }
-                //         if (20 <= temp) {
-                //             return "hot";
-                //         }
-                //         return "warm";
-                //     }
-                // }
-                <li key={key} className="{state}">
-                    <p className="date">{rk.dt_txt + "+09:00"}</p>
+                <li key={key} className={tempLevel}>
+                    <p className="date">{rk.dt_txt}</p>
                     <div className="flex bottom">
                         <div>
                             <p className="icon">
@@ -80,15 +78,15 @@ export default class extends React.Component {
                             </p>
                             <p className="main">{rk.weather[0].main}</p>
                         </div>
-                    <div className="temp flex">
-                        <h3><span>{tempHalf}</span>{Math.round(temp)}°C</h3>
-                    </div>
-                    <div className="details">
-                        <p> <span>{cloud}</span>clouds : {rk.clouds.all} %</p>
-                        <p> <span>{tint}</span>humidity : {rk.main.humidity} %</p>
-                        <p> <span>{meter}</span>grnd level : {rk.main.grnd_level} hPa</p>
-                        <p> <span>{wind}</span>wind speed : {rk.wind.speed} m/s</p>
-                    </div>
+                        <div className="temp flex">
+                            <h3><span>{tempHalf}</span>{Math.round(temp)}°C</h3>
+                        </div>
+                        <div className="details">
+                            <p> <span>{cloud}</span>clouds : {rk.clouds.all} %</p>
+                            <p> <span>{tint}</span>humidity : {rk.main.humidity} %</p>
+                            <p> <span>{meter}</span>grnd level : {rk.main.grnd_level} hPa</p>
+                            <p> <span>{wind}</span>wind speed : {rk.wind.speed} m/s</p>
+                        </div>
                     </div>
                 </li>
             );

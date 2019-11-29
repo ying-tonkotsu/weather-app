@@ -10,44 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color:#004E66;
 }
-.alignleft{
-  text-align:left;
-}
-.mother{
-  margin:0 auto;
-  text-align:center;
-}
-.leftBar{
-  position: fixed;
-  width:40%;
-  height:100vh;
-  background-color: #004E66;
-  padding-top:80px;
-}
-.rightBar{
-  margin-left:29%;
-  width:60%;
-  padding-top:80px;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-ul{
-  max-width:100vw;
-}
-li{
-  list-style:none;
-  padding:30px 40px;
-  background-color:#FCBE32;
-  margin:30px auto;
-  max-width:30vw;
-  min-width:400px;
-  border-radius:30px;
-}
-p,
-h1,
-h3{
+p,h1,h2,h3,h4,h5,h6{
   color:#E1EEF6;
   margin:0;
   font-family: 'Sulphur Point', sans-serif;
@@ -57,58 +20,119 @@ h1{
   font-weight:100;
   padding:20px 0;
 }
-.location{
-  padding:10px 0;
-}
-p.date{
-  color:#FFF;
-  font-weight:bold;
-  font-size:22px;
-  font-weight:400;
-  padding-bottom:10px;
-  font-family: 'Inconsolata', monospace;
-}
-p.main{
-  font-size:26px;
-  font-weight:100;
-  padding-top:10px;
-}
-.temp h3{
-  font-size:50px;
-  line-height: 100px;
-  font-weight:100;
-  color:#004E66;
-}
-.bottom div{
-  width:33%;
-  justify-content: space-around;
-}
-.bottom p{
-  color:#004E66;
-  font-weight:bold;
-  font-weight:100;
-}
-p.icon{
-  background-color:#FFF;
-  border-radius:90px;
-  width:83px;
-  margin:0 auto;
-}
-p.icon img{
-  height:80px;
+.alignleft{
+  text-align:left;
 }
 .flex{
   display:flex;
 }
-.details p{
-  text-align: right;
+.mother{
+  margin:0 auto;
+  text-align:center;
 }
-.details span,
-.temp span{
-  width:1.5em;
-  padding-right:0.5em;
-  color:#fff;
+/* フォームのバー */
+.leftBar{
+  position: fixed;
+  width:40%;
+  height:100vh;
+  background-color: #004E66;
+  padding-top:80px;
 }
+/* listのバー */
+.rightBar{
+  margin-left:29%;
+  width:60%;
+  padding-top:80px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul{
+  max-width:80vw;
+}
+  li{
+    list-style:none;
+    padding:30px 40px;
+    margin:30px auto;
+    max-width:30vw;
+    min-width:400px;
+    border-radius:30px;
+  }
+  /* 気温が9度以下の時 */
+    li.cold{
+      background-color:#E1EEF6;
+    }
+    li.cold p.date,
+    li.cold span{
+      color:#FCBE32;
+    }
+  /* 気温が10度以上24度以下 */
+    li.warm{
+      background-color:#FCBE32;
+    }
+  /* 気温が25度以上 */
+    li.hot{
+      background-color:#FF5F2E;
+    }
+      .bottom div{
+        /* width:33%; */
+        justify-content: space-around;
+      }
+      .bottom p{
+        color:#004E66;
+        font-weight:bold;
+        font-weight:100;
+      }　
+        /* 日付 */
+        p.date{
+          color:#FFF;
+          font-weight:bold;
+          font-size:22px;
+          font-weight:400;
+          padding-bottom:10px;
+          font-family: 'Inconsolata', monospace;
+        }
+        /* 天気 */
+        p.icon{
+          background-color:#FFF;
+          border-radius:90px;
+          width:83px;
+          margin:0 auto;
+        }
+        p.icon img{
+          height:80px;
+        }
+        p.main{
+          font-size:26px;
+          font-weight:100;
+          padding-top:10px;
+        }
+        /* 気温 */
+        .temp{
+          width:35%;
+        }
+          .temp h3{
+            font-size:50px;
+            line-height: 100px;
+            font-weight:100;
+            color:#004E66;
+          }
+          /* 詳細 */
+        .details{
+          width:40%;
+        }
+          .details p{
+            text-align: right;
+          }
+          .details span,
+          .temp span{
+            width:1.5em;
+            padding-right:0.5em;
+            color:#fff;
+          }
+/* フォーム系 */
 button{
   background-color:#FF5F2E;
   color:#FFF;
@@ -131,4 +155,7 @@ input{
   padding:5px 10px;
   font-size:16px;
   font-family: 'Sulphur Point', sans-serif;
+}
+.location{
+  padding:10px 0;
 }
