@@ -44,6 +44,33 @@ h1{
   width:60%;
   padding-top:80px;
 }
+/* フォーム系 */
+button{
+  background-color:#FF5F2E;
+  color:#FFF;
+  border:none;
+  border-radius:25px;
+  padding:10px;
+  font-size:16px;
+  margin-left:15px;
+  width:38px;
+  transition: all 0.6s ease 0s;
+}
+  button:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 5px 3px rgba(255,255,255,0.5));
+    transform: scale(1.1, 1.1);
+  }
+input{
+  border:none;
+  border-radius:20px;
+  padding:5px 10px;
+  font-size:16px;
+  font-family: 'Sulphur Point', sans-serif;
+}
+.location{
+  padding:10px 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -76,86 +103,60 @@ ul{
     li.hot{
       background-color:#FF5F2E;
     }
-      .bottom div{
-        /* width:33%; */
-        justify-content: space-around;
-      }
-      .bottom p{
-        color:#004E66;
+      /* 日付 */
+      p.date{
+        color:#FFF;
         font-weight:bold;
+        font-size:22px;
+        font-weight:400;
+        padding-bottom:10px;
+        font-family: 'Inconsolata', monospace;
+      }
+       /* 天気 */
+       .mark{
+        background-color:#FFF;
+        border-radius:90px;
+        width:83px;
+        margin:0 auto;
+      }
+      .mark img{
+        height:80px;
+      }
+      p.main{
+        font-size:26px;
         font-weight:100;
-      }　
-        /* 日付 */
-        p.date{
-          color:#FFF;
+        padding-top:10px;
+      }
+      /* 気温 */
+      .temp{
+        padding-left:35px;
+      }
+      .temp h3{
+        font-size:50px;
+        line-height: 100px;
+        font-weight:100;
+        text-align: center;
+        color:#004E66;
+      }
+      /* 詳細 */
+      .details p{
+        text-align: right;
+      }
+      .details span,
+      .temp span{
+        width:1.5em;
+        padding-right:0.5em;
+        color:#fff;
+      }
+      .details span{
+          font-size:18px;
+      }
+      .bottom{
+        /* width:33%; */
+        justify-content: space-between;
+      }
+        .bottom p{
+          color:#004E66;
           font-weight:bold;
-          font-size:22px;
-          font-weight:400;
-          padding-bottom:10px;
-          font-family: 'Inconsolata', monospace;
-        }
-        /* 天気 */
-        p.icon{
-          background-color:#FFF;
-          border-radius:90px;
-          width:83px;
-          margin:0 auto;
-        }
-        p.icon img{
-          height:80px;
-        }
-        p.main{
-          font-size:26px;
           font-weight:100;
-          padding-top:10px;
         }
-        /* 気温 */
-        .temp{
-          width:35%;
-        }
-          .temp h3{
-            font-size:50px;
-            line-height: 100px;
-            font-weight:100;
-            color:#004E66;
-          }
-          /* 詳細 */
-        .details{
-          width:40%;
-        }
-          .details p{
-            text-align: right;
-          }
-          .details span,
-          .temp span{
-            width:1.5em;
-            padding-right:0.5em;
-            color:#fff;
-          }
-/* フォーム系 */
-button{
-  background-color:#FF5F2E;
-  color:#FFF;
-  border:none;
-  border-radius:25px;
-  padding:10px;
-  font-size:16px;
-  margin-left:15px;
-  width:38px;
-  transition: all 0.6s ease 0s;
-}
-button:hover{
-  cursor: pointer;
-  filter: drop-shadow(0px 5px 3px rgba(255,255,255,0.5));
-  transform: scale(1.1, 1.1);
-}
-input{
-  border:none;
-  border-radius:20px;
-  padding:5px 10px;
-  font-size:16px;
-  font-family: 'Sulphur Point', sans-serif;
-}
-.location{
-  padding:10px 0;
-}
