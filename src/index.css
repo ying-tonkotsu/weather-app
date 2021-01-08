@@ -145,6 +145,7 @@ ul{
       /* 詳細 */
       .details p{
         text-align: right;
+        line-height:29px;
       }
       .details span,
       .temp span{

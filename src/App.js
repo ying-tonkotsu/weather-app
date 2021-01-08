@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from "axios";
 import { myKey } from "./key";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloud } from '@fortawesome/free-solid-svg-icons';
 import { faTint } from '@fortawesome/free-solid-svg-icons';
@@ -25,7 +26,7 @@ export default class extends React.Component {
             requestCity: '',         //  ex. 'Tokyo,jp'
             city: '',
             response: [],
-            request_line : 7
+            request_line: 7,
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleGetWeather = this.handleGetWeather.bind(this);
@@ -85,10 +86,10 @@ export default class extends React.Component {
                             <h3><span>{tempHalf}</span>{Math.round(temp)}°C</h3>
                         </div>
                         <div className="details">
-                            <p> <span>{cloud}</span>clouds:{rk.clouds.all} %</p>
-                            <p> <span>{tint}</span>humidity:{rk.main.humidity} %</p>
-                            <p> <span>{meter}</span>grnd level:{rk.main.grnd_level} hPa</p>
-                            <p> <span>{wind}</span>wind speed:{rk.wind.speed} m/s</p>
+                            <p> <span>{cloud}</span>clouds: {rk.clouds.all}%</p>
+                            <p> <span>{tint}</span>humidity: {rk.main.humidity}%</p>
+                            <p> <span>{meter}</span>grnd level: {rk.main.grnd_level}hPa</p>
+                            <p> <span>{wind}</span>wind speed: {rk.wind.speed}m/s</p>
                         </div>
                     </div>
                 </li>
